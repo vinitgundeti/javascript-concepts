@@ -326,7 +326,8 @@ person.arrowFn();  // Arrow: undefined (or window in browser)
 
     ## After Currying (Unary Function Chain)
     ```javascript
-    // normal function
+    // normal function example
+    
     function curryUnaryFunction(a) {
       return function(b) {
         return function(c) {
@@ -334,9 +335,9 @@ person.arrowFn();  // Arrow: undefined (or window in browser)
           };
         };
       }
-    console.log(curriedAdd(1)(2)(3)); // 6
 
-    // with arrow function
+    // with arrow function example
+    
     const curryUnaryFunction = (a) => (b) => (c) => a + b + c;
 
     console.log(curryUnaryFunction(1));       // Returns: function (b) => ...
