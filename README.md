@@ -326,6 +326,17 @@ person.arrowFn();  // Arrow: undefined (or window in browser)
 
     ## After Currying (Unary Function Chain)
     ```javascript
+    // normal function
+    function curryUnaryFunction(a) {
+      return function(b) {
+        return function(c) {
+          return a + b + c;
+          };
+        };
+      }
+    console.log(curriedAdd(1)(2)(3)); // 6
+
+    // with arrow function
     const curryUnaryFunction = (a) => (b) => (c) => a + b + c;
 
     console.log(curryUnaryFunction(1));       // Returns: function (b) => ...
@@ -344,6 +355,7 @@ person.arrowFn();  // Arrow: undefined (or window in browser)
 
       - Encourages clean, modular code
       → You can split logic into smaller single-responsibility functions.
+
 <img width="803" height="657" alt="image" src="https://github.com/user-attachments/assets/a00ff2ae-e3f3-496e-8d30-9719a1b8e62a" />
 
 
